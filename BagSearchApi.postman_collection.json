@@ -1,0 +1,411 @@
+{
+	"info": {
+		"_postman_id": "e74390c8-1d4b-40d4-85cd-ad9e6d06fa91",
+		"name": "BagSearchApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AuthenticationMindCubeUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"UserName\":\"VinayakG\",\n\"Password\":\"54321\",\n\"DeviceId\":{{DeviceId}},\n\"DeviceName\":{{DeviceName}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API Path}}/Authentication/AuthenticateMindCubeUser",
+					"host": [
+						"{{API Path}}"
+					],
+					"path": [
+						"Authentication",
+						"AuthenticateMindCubeUser"
+					]
+				},
+				"description": "Authinticate mindCube User API"
+			},
+			"response": []
+		},
+		{
+			"name": "Process Master",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API Path}}/BagDetails/getProcessMaster",
+					"host": [
+						"{{API Path}}"
+					],
+					"path": [
+						"BagDetails",
+						"getProcessMaster"
+					]
+				},
+				"description": "Process master will provide a list of all process."
+			},
+			"response": []
+		},
+		{
+			"name": "Factory Master",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{API Path}}/BagDetails/getFactoryMaster",
+					"host": [
+						"{{API Path}}"
+					],
+					"path": [
+						"BagDetails",
+						"getFactoryMaster"
+					]
+				},
+				"description": "Factory Master"
+			},
+			"response": [
+				{
+					"name": "Factory Master Succes Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{API Path}}/BagDetails/getFactoryMaster",
+							"host": [
+								"{{API Path}}"
+							],
+							"path": [
+								"BagDetails",
+								"getFactoryMaster"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 08 Jul 2021 06:47:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=15, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Data\": [\n        {\n            \"Code\": 1,\n            \"LocationName\": \"Gold Star Jewellery Ltd\",\n            \"Alias\": \"GS \"\n        },\n        {\n            \"Code\": 4,\n            \"LocationName\": \"Gold Star Designs PVt ltd\",\n            \"Alias\": \"GD \"\n        },\n        {\n            \"Code\": 5,\n            \"LocationName\": \"Gold Star GD HQ\",\n            \"Alias\": \"AL \"\n        },\n        {\n            \"Code\": 6,\n            \"LocationName\": \"Gold Star CQ\",\n            \"Alias\": \"CQ \"\n        },\n        {\n            \"Code\": 7,\n            \"LocationName\": \"Trading\",\n            \"Alias\": \"DT \"\n        },\n        {\n            \"Code\": 8,\n            \"LocationName\": \"GS Internal\",\n            \"Alias\": \"IN \"\n        },\n        {\n            \"Code\": 9,\n            \"LocationName\": \"GOLDSTAR\",\n            \"Alias\": \"aa \"\n        },\n        {\n            \"Code\": 10,\n            \"LocationName\": \"CENTROQUOTRO\",\n            \"Alias\": \"CF \"\n        },\n        {\n            \"Code\": 11,\n            \"LocationName\": \"GOLDSTAR INDIA\",\n            \"Alias\": \"GI \"\n        },\n        {\n            \"Code\": 12,\n            \"LocationName\": \"mangal jewels\",\n            \"Alias\": \"mj \"\n        },\n        {\n            \"Code\": 13,\n            \"LocationName\": \"GS PD\",\n            \"Alias\": \"PD \"\n        },\n        {\n            \"Code\": 14,\n            \"LocationName\": \"GS Sales\",\n            \"Alias\": \"MK \"\n        },\n        {\n            \"Code\": 15,\n            \"LocationName\": \"GS PD Factory\",\n            \"Alias\": \"PF \"\n        },\n        {\n            \"Code\": 16,\n            \"LocationName\": \"CAD\",\n            \"Alias\": \"CD \"\n        },\n        {\n            \"Code\": 17,\n            \"LocationName\": \"CAM\",\n            \"Alias\": \"CM \"\n        },\n        {\n            \"Code\": 18,\n            \"LocationName\": \"DIAMSTAR\",\n            \"Alias\": \"DM \"\n        },\n        {\n            \"Code\": 19,\n            \"LocationName\": \"GS - Control\",\n            \"Alias\": \"DG \"\n        },\n        {\n            \"Code\": 20,\n            \"LocationName\": \"DT Assortment\",\n            \"Alias\": \"AT \"\n        },\n        {\n            \"Code\": 21,\n            \"LocationName\": \"DT QualityBox\",\n            \"Alias\": \"QB \"\n        },\n        {\n            \"Code\": 22,\n            \"LocationName\": \"DT Ready Flutes\",\n            \"Alias\": \"RF \"\n        },\n        {\n            \"Code\": 23,\n            \"LocationName\": \"GS - Diamond Stock\",\n            \"Alias\": \"GG \"\n        },\n        {\n            \"Code\": 24,\n            \"LocationName\": \"GS - Scrap\",\n            \"Alias\": \"3S \"\n        },\n        {\n            \"Code\": 25,\n            \"LocationName\": \"GS - Dust\",\n            \"Alias\": \"3D \"\n        },\n        {\n            \"Code\": 26,\n            \"LocationName\": \"GS - Finished Stock\",\n            \"Alias\": \"GF \"\n        },\n        {\n            \"Code\": 27,\n            \"LocationName\": \"GS - Wet Dust\",\n            \"Alias\": \"GW \"\n        },\n        {\n            \"Code\": 28,\n            \"LocationName\": \"GS - Assaying Stock\",\n            \"Alias\": \"GA \"\n        },\n        {\n            \"Code\": 29,\n            \"LocationName\": \"GD dust\",\n            \"Alias\": \"QC \"\n        },\n        {\n            \"Code\": 30,\n            \"LocationName\": \"GD Assaying\",\n            \"Alias\": \"A  \"\n        },\n        {\n            \"Code\": 31,\n            \"LocationName\": \"GD Scrap\",\n            \"Alias\": \"S  \"\n        },\n        {\n            \"Code\": 32,\n            \"LocationName\": \"GD Fin\",\n            \"Alias\": \"F1 \"\n        },\n        {\n            \"Code\": 33,\n            \"LocationName\": \"GD Wet Dust\",\n            \"Alias\": \"W  \"\n        },\n        {\n            \"Code\": 34,\n            \"LocationName\": \"GS Refining\",\n            \"Alias\": \"GR \"\n        },\n        {\n            \"Code\": 35,\n            \"LocationName\": \"GS Central Inventory\",\n            \"Alias\": \"CI \"\n        },\n        {\n            \"Code\": 36,\n            \"LocationName\": \"GD Central Inventory\",\n            \"Alias\": \"I  \"\n        },\n        {\n            \"Code\": 37,\n            \"LocationName\": \"R-II\",\n            \"Alias\": \"R2 \"\n        },\n        {\n            \"Code\": 38,\n            \"LocationName\": \"test\",\n            \"Alias\": \"11 \"\n        },\n        {\n            \"Code\": 39,\n            \"LocationName\": \"test2\",\n            \"Alias\": \"12 \"\n        },\n        {\n            \"Code\": 40,\n            \"LocationName\": \"GS Filing Polish\",\n            \"Alias\": \"FP \"\n        },\n        {\n            \"Code\": 41,\n            \"LocationName\": \"Diam star Fin stock\",\n            \"Alias\": \"DF \"\n        },\n        {\n            \"Code\": 42,\n            \"LocationName\": \"GS - Scrap (Band)\",\n            \"Alias\": \"S1 \"\n        },\n        {\n            \"Code\": 43,\n            \"LocationName\": \"Gold Star III A Floor 2\",\n            \"Alias\": \"DS \"\n        },\n        {\n            \"Code\": 44,\n            \"LocationName\": \"GoldStar Sample Manfg AppSrv\",\n            \"Alias\": \"SD \"\n        },\n        {\n            \"Code\": 45,\n            \"LocationName\": \"SD Control AppSrv\",\n            \"Alias\": \"SC \"\n        },\n        {\n            \"Code\": 46,\n            \"LocationName\": \"DS Control AppSrv\",\n            \"Alias\": \"CT \"\n        },\n        {\n            \"Code\": 47,\n            \"LocationName\": \"D Control AppSrv\",\n            \"Alias\": \"BC \"\n        },\n        {\n            \"Code\": 48,\n            \"LocationName\": \"GD Control AppSrv\",\n            \"Alias\": \"GC \"\n        },\n        {\n            \"Code\": 49,\n            \"LocationName\": \"GOLD STAR BKC\",\n            \"Alias\": \"GB \"\n        },\n        {\n            \"Code\": 50,\n            \"LocationName\": \"BKC - R2\",\n            \"Alias\": \"R2 \"\n        },\n        {\n            \"Code\": 51,\n            \"LocationName\": \"SS\",\n            \"Alias\": \"SS \"\n        },\n        {\n            \"Code\": 52,\n            \"LocationName\": \"SRS\",\n            \"Alias\": \"SR \"\n        },\n        {\n            \"Code\": 53,\n            \"LocationName\": \"AS\",\n            \"Alias\": \"AS \"\n        },\n        {\n            \"Code\": 54,\n            \"LocationName\": \"KS\",\n            \"Alias\": \"KS \"\n        },\n        {\n            \"Code\": 55,\n            \"LocationName\": \"S4\",\n            \"Alias\": \"S4 \"\n        },\n        {\n            \"Code\": 56,\n            \"LocationName\": \"NS\",\n            \"Alias\": \"NS \"\n        },\n        {\n            \"Code\": 57,\n            \"LocationName\": \"SP\",\n            \"Alias\": \"SP \"\n        },\n        {\n            \"Code\": 58,\n            \"LocationName\": \"MFG\",\n            \"Alias\": \"MX \"\n        },\n        {\n            \"Code\": 59,\n            \"LocationName\": \"RGH\",\n            \"Alias\": \"RG \"\n        },\n        {\n            \"Code\": 60,\n            \"LocationName\": \"RPR\",\n            \"Alias\": \"RP \"\n        },\n        {\n            \"Code\": 61,\n            \"LocationName\": \"Silver Model\",\n            \"Alias\": \"SM \"\n        },\n        {\n            \"Code\": 62,\n            \"LocationName\": \"SSRS\",\n            \"Alias\": \"AJ \"\n        },\n        {\n            \"Code\": 63,\n            \"LocationName\": \"test3\",\n            \"Alias\": \"ts \"\n        },\n        {\n            \"Code\": 64,\n            \"LocationName\": \"test4\",\n            \"Alias\": \"t1 \"\n        },\n        {\n            \"Code\": 65,\n            \"LocationName\": \"Gold Star Diamond Pvt Ltd\",\n            \"Alias\": \"ST \"\n        },\n        {\n            \"Code\": 66,\n            \"LocationName\": \"R2 Floor \",\n            \"Alias\": \"FR \"\n        },\n        {\n            \"Code\": 67,\n            \"LocationName\": \"LOTUS JEWELLERY DMCC\",\n            \"Alias\": \"LJ \"\n        },\n        {\n            \"Code\": 68,\n            \"LocationName\": \"cwedq\",\n            \"Alias\": \"fc \"\n        },\n        {\n            \"Code\": 69,\n            \"LocationName\": \"Comm Control\",\n            \"Alias\": \"CC \"\n        },\n        {\n            \"Code\": 70,\n            \"LocationName\": \"Comm Scrap\",\n            \"Alias\": \"MS \"\n        },\n        {\n            \"Code\": 71,\n            \"LocationName\": \"Comm Dust\",\n            \"Alias\": \"MD \"\n        },\n        {\n            \"Code\": 72,\n            \"LocationName\": \"Comm Finished Stock\",\n            \"Alias\": \"FS \"\n        },\n        {\n            \"Code\": 73,\n            \"LocationName\": \"CII Scrap\",\n            \"Alias\": \"IS \"\n        },\n        {\n            \"Code\": 74,\n            \"LocationName\": \"CII Dust\",\n            \"Alias\": \"ID \"\n        },\n        {\n            \"Code\": 75,\n            \"LocationName\": \"CII Scrap (Band)\",\n            \"Alias\": \"SB \"\n        },\n        {\n            \"Code\": 76,\n            \"LocationName\": \"Band Control\",\n            \"Alias\": \"DC \"\n        },\n        {\n            \"Code\": 77,\n            \"LocationName\": \"Band Scrap\",\n            \"Alias\": \"DP \"\n        },\n        {\n            \"Code\": 78,\n            \"LocationName\": \"Finished Stock (Band)\",\n            \"Alias\": \"BD \"\n        },\n        {\n            \"Code\": 79,\n            \"LocationName\": \"DM Control\",\n            \"Alias\": \"C1 \"\n        },\n        {\n            \"Code\": 80,\n            \"LocationName\": \"CII Assaying Stock\",\n            \"Alias\": \"CA \"\n        },\n        {\n            \"Code\": 81,\n            \"LocationName\": \"Comm Assaying Stock\",\n            \"Alias\": \"A1 \"\n        },\n        {\n            \"Code\": 82,\n            \"LocationName\": \"Band Assaying Stock\",\n            \"Alias\": \"BA \"\n        },\n        {\n            \"Code\": 83,\n            \"LocationName\": \"Band Dust\",\n            \"Alias\": \"D1 \"\n        },\n        {\n            \"Code\": 84,\n            \"LocationName\": \"Band Wet Dust\",\n            \"Alias\": \"BW \"\n        },\n        {\n            \"Code\": 85,\n            \"LocationName\": \"GS - Stores\",\n            \"Alias\": \"SX \"\n        },\n        {\n            \"Code\": 86,\n            \"LocationName\": \"GOLD STAR FINE JEWELLERY LLP\",\n            \"Alias\": \"R3 \"\n        },\n        {\n            \"Code\": 87,\n            \"LocationName\": \"BDB diamond\",\n            \"Alias\": \"BK \"\n        },\n        {\n            \"Code\": 88,\n            \"LocationName\": \"Central Finding\",\n            \"Alias\": \"F  \"\n        },\n        {\n            \"Code\": 89,\n            \"LocationName\": \"R2Demo\",\n            \"Alias\": \"RD \"\n        },\n        {\n            \"Code\": 90,\n            \"LocationName\": \"G8-G9 STORES\",\n            \"Alias\": \"9  \"\n        },\n        {\n            \"Code\": 91,\n            \"LocationName\": \"Gold Star Surat\",\n            \"Alias\": \"SU \"\n        },\n        {\n            \"Code\": 92,\n            \"LocationName\": \"CentralFindingOK\",\n            \"Alias\": \"CO \"\n        },\n        {\n            \"Code\": 93,\n            \"LocationName\": \"CentralFindingReject\",\n            \"Alias\": \"CR \"\n        },\n        {\n            \"Code\": 94,\n            \"LocationName\": \"IIIA Diamond Stock New\",\n            \"Alias\": \"DN \"\n        },\n        {\n            \"Code\": 95,\n            \"LocationName\": \"QA\",\n            \"Alias\": \"QA \"\n        },\n        {\n            \"Code\": 96,\n            \"LocationName\": \"PACKING\",\n            \"Alias\": \"PK \"\n        },\n        {\n            \"Code\": 97,\n            \"LocationName\": \"CVD\",\n            \"Alias\": \"CV \"\n        },\n        {\n            \"Code\": 98,\n            \"LocationName\": \"GOLD STAR JEWELLERY PVT LTD\",\n            \"Alias\": \"D  \"\n        },\n        {\n            \"Code\": 99,\n            \"LocationName\": \"SURAT\",\n            \"Alias\": \"ST \"\n        },\n        {\n            \"Code\": 100,\n            \"LocationName\": \"K3\",\n            \"Alias\": \"K3 \"\n        },\n        {\n            \"Code\": 101,\n            \"LocationName\": \"BC Control\",\n            \"Alias\": \"BCT\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Save User Configuration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "{{authHeaderName}}",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"FromProcess\": 15,\n\"ToProcess\": 18,\n\"FactoryCode\": 6\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API Path}}/Authentication/SaveUserBagConfig",
+					"host": [
+						"{{API Path}}"
+					],
+					"path": [
+						"Authentication",
+						"SaveUserBagConfig"
+					]
+				},
+				"description": "Save User Configuration"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Config",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "{{authHeaderName}}",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\"ConfigCode\": 1 \n } ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API Path}}/Authentication/GetUserBagConfig",
+					"host": [
+						"{{API Path}}"
+					],
+					"path": [
+						"Authentication",
+						"GetUserBagConfig"
+					]
+				},
+				"description": "Get User Config"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bag Images",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "{{authHeaderName}}",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"BagNo\": \"GS253\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API Path}}/QALineBag/getBagImages",
+					"host": [
+						"{{API Path}}"
+					],
+					"path": [
+						"QALineBag",
+						"getBagImages"
+					]
+				},
+				"description": "Get a list of bag images"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bag Info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "{{authHeaderName}}",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"BagNo\": \"GS253\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API Path}}/QALineBag/getBagInfo",
+					"host": [
+						"{{API Path}}"
+					],
+					"path": [
+						"QALineBag",
+						"getBagInfo"
+					]
+				},
+				"description": "This api will provide the complete imformation of the scanned Bag."
+			},
+			"response": []
+		},
+		{
+			"name": "Save Production Entry",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "{{authHeaderName}}",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"BagNo\": \"GS253\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API Path}}/QALineBag/saveProdEntry",
+					"host": [
+						"{{API Path}}"
+					],
+					"path": [
+						"QALineBag",
+						"saveProdEntry"
+					]
+				},
+				"description": "This will save the bage information."
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Production Entry",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "{{authHeaderName}}",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"BagNo\": \"GS253\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API Path}}/QALineBag/resetProdEntry",
+					"host": [
+						"{{API Path}}"
+					],
+					"path": [
+						"QALineBag",
+						"resetProdEntry"
+					]
+				},
+				"description": "This will save the bage information."
+			},
+			"response": [
+				{
+					"name": "Reset Production Entry",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "{{authHeaderName}}",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"BagNo\": \"GS253\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API Path}}/QALineBag/resetProdEntry",
+							"host": [
+								"{{API Path}}"
+							],
+							"path": [
+								"QALineBag",
+								"resetProdEntry"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
